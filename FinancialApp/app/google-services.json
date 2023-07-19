@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "994733071257",
+    "project_id": "financialapp-be725",
+    "storage_bucket": "financialapp-be725.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994733071257:android:d1f57bd73634ec69551108",
+        "android_client_info": {
+          "package_name": "com.raywenderlich.financialapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "994733071257-n5aar0imognh6raducj43kcjthuq4rav.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvR8E7ByI9jkJ-d73ZeYNK_GsGo5La_-I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "994733071257-n5aar0imognh6raducj43kcjthuq4rav.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

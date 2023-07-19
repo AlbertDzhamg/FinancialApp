@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AcountingActivity"
+    android:background="#ffff"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:background="@drawable/default_option_border_bg_button"
+        android:id="@+id/budget_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="18dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Бюджет"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="30000"
+                android:textStyle="normal"
+                android:textColor="@color/white"
+                android:fontFamily="@font/nunito"
+                android:textSize="30sp"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_toRightOf="@id/balance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RUB"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:fontFamily="@font/nunito"
+                android:textSize="20sp"
+                android:layout_marginLeft="10dp"/>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/budget_layout"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <TextView
+                    android:textColor="#006d5b"
+                    android:id="@+id/budget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$400"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:fontFamily="@font/nunito"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Доходы"
+                    android:textSize="14sp"
+                    android:textAllCaps="true"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_weight="0.5"
+                android:gravity="center">
+
+                <TextView
+                    android:textColor="#8b0000"
+                    android:id="@+id/expense"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$400"
+                    android:textStyle="bold"
+                    android:textSize="26sp"
+                    android:fontFamily="@font/nunito"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Расходы"
+                    android:textSize="14sp"
+                    android:textAllCaps="true"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:textColor="@color/black"
+        android:id="@+id/rcTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="История операций"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textAllCaps="true"
+        android:layout_below="@id/dashboard"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcLabels"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rcTitle"
+        android:layout_marginTop="10dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/lc_add" />
+
+
+
+
+</RelativeLayout>
